@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div id="stories">
+  <h1> Pick a Story:</h1>
+  <ul>
+    <li>
+      <a routerLink="/{{username}}/story/new-story">Create a Story</a>
+    </li>
+    <li *ngFor="let story of stories">
+        <a routerLink="/{{username}}/story/{{story.title}}">{{story.title}} {{story.genre}}</a>
+    </li>
+  </ul>
+</div>

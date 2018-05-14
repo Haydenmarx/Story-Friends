@@ -1,0 +1,14 @@
+<div id="log-in">
+  <h1> Story Friends</h1>
+  <h3> Collaborative Storytelling with fictional Characters</h3>
+  <ul>
+    <li (mouseenter)="hover=true" (mouseleave)="hover=false">
+      <span *ngIf="hover!=true" >New Character?</span>
+      <input *ngIf="hover==true" placeholder="Character Name" [(ngModel)]="charactername" />
+      <button *ngIf="hover==true" (click)="addUser(charactername)" >Submit</button>
+    </li>
+    <li *ngFor="let user of users">
+      <a routerLink="/{{user.username}}/stories" (click)="updateCurrentUser(user)" >{{user.username}}</a>
+    </li>
+  </ul>
+</div>

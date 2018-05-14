@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div id="profile-container">
+  <div>
+      <h1>Chapters Written:</h1>
+  </div>
+  <div>
+    <h1>Bio:</h1>
+      <div (mouseenter)="hoverName=true" (mouseleave)="hoverName=false">
+        <label>Character Name:</label>
+        <br />
+        <span *ngIf="hoverName!=true" >{{username}}</span>
+        <input *ngIf="hoverName==true" placeholder="Character Name" [(ngModel)]="username" />
+        <hr />
+      </div>
+      <div (mouseenter)="hoverBio=true" (mouseleave)="hoverBio=false">
+        <label>Character Bio:</label>
+        <br />
+        <span *ngIf="hoverBio!=true" >{{bio}}</span>
+        <textarea *ngIf="hoverBio==true" placeholder="Character Name" [(ngModel)]="bio"></textarea>
+        <br />
+        <hr />
+      </div>
+      <button (click)="updateUserProfile(username, bio)" >UPDATE</button>
+  </div>>
+</div>

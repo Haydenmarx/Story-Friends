@@ -1,0 +1,33 @@
+#log-in {
+  width: 600px;
+  margin-left: calc(50vw - 300px); 
+  margin-top: calc(50vh - 300px);
+}
+
+#log-in > h1 {
+  text-decoration: underline;
+  margin-bottom: 0px;
+  font-size: 4em;
+}
+
+#log-in > h3 {
+  margin-top: 0px;
+  font-style: italic;
+}
+
+#log-in > ul {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#log-in li {
+  margin-bottom: 5px;
+  flex: auto;
+  padding: 0px 5px;
+}
+
+#log-in li:hover {
+  font-weight: 600;
+}

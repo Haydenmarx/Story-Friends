@@ -1,0 +1,32 @@
+#profile-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#profile-container > div {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-container > div:first-of-type {
+  flex-grow: 2;
+  border-right: 3px solid black;  
+}
+
+#profile-container > div > h1 {
+  font-weight: 400;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#profile-container label {
+  text-decoration: underline;
+}
+
+#profile-container textarea {
+  min-width: 100%;
+  max-width: 100%;
+}
